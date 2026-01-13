@@ -1,0 +1,62 @@
+/*******************************************************/
+/***************** 11. Features Section ****************/
+/*******************************************************/
+.features-section
+    overflow: hidden
+    &:before
+        content: ''
+        left: 0
+        bottom: 0
+        z-index: -1
+        opacity: 0.15
+        position: absolute
+        +size(800px, 500px)
+        filter: blur(200px)
+        background: $primary-color
+    &:after
+        content: ''
+        top: 0
+        right: 0
+        z-index: -1
+        opacity: 0.1
+        +size(600px)
+        position: absolute
+        filter: blur(200px)
+        background: #005DE0
+.feature-content
+    max-width: 515px
+.features-image
+    +xld
+        margin-right: -200px
+    
+/* Success Items */
+.success-wrap
+    display: flex
+    +msd
+        display: block
+.success-item
+    display: flex
+    p
+        @extend %heading
+        margin-bottom: 0
+        text-transform: capitalize
+    &:not(:last-child)
+        margin-right: 30px
+        padding-right: 30px
+        border-right: 1px solid #D1D2D3
+        +msd
+            margin-right: 0
+            padding-right: 0
+            border-right: none
+            margin-bottom: 30px
+.count-text
+    line-height: 1
+    font-size: 50px
+    @extend %heading
+    min-width: 115px
+    margin-right: 20px
+    +smd
+        font-size: 40px
+    &.plus
+        &:after
+            content: '+'

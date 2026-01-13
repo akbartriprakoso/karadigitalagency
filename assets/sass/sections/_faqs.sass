@@ -1,0 +1,54 @@
+/*******************************************************/
+/****************** 17. FAQs Section *******************/
+/*******************************************************/
+.faq-section
+    .rectangle-shape
+        left: 20%
+        top: 15%
+.faq-accordion
+    .card
+        border: none
+        padding: 15px 30px
+        background: $light-color
+        +xsd
+            +gapLR(padding, 15px)
+        &:not(:last-child)
+            margin-bottom: 15px
+    .card-header
+        padding: 0
+        border: none
+        font-size: 18px
+        font-weight: 700
+        border-radius: 0
+        color: $heading-color
+        background: transparent
+        font-family: $heading-font
+        text-transform: capitalize
+        +flexcenter(space-between)
+        +smd
+            font-size: 16px
+        .toggle-btn
+            flex: none
+            transition: 0.5s
+            margin-left: 10px
+            +flexcenter(center)
+            +circle(white, 40px)
+            transform: rotate(180deg)
+            &:after,
+            &:before
+                content: ''
+                +size(20px, 2px)
+                transition: 0.5s
+                position: absolute
+                background: $primary-color
+            &:before
+                transform: rotate(0)
+        &.collapsed
+            .toggle-btn
+                transform: rotate(0deg)
+                &:before
+                    transform: rotate(-90deg)
+    .card-body
+        padding: 15px 0 0
+        p
+            margin-bottom: 10px

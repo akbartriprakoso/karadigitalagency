@@ -1,0 +1,43 @@
+/*******************************************************/
+/***************** 20. Contact Section ******************/
+/*******************************************************/
+.contact-form,
+.contact-info-wrap
+    height: 100%
+    display: flex
+    padding: 50px 40px
+    align-items: center
+    +xsd
+        +gapLR(padding, 25px)
+    
+.contact-info-item
+    display: flex
+    &:not(:last-child)
+        margin-bottom: 30px
+        padding-bottom: 30px
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1)
+    i
+        flex: none
+        font-size: 25px
+        margin-right: 20px
+        +circle(white, 70px)
+        color: $primary-color
+        +xsd
+            +size(50px)
+            font-size: 20px
+            line-height: 50px
+    h5
+        margin-bottom: 8px
+    p
+        margin-bottom: 0
+    .content
+        +xsd
+            font-size: 14px
+    
+.contact-form
+    background: #ECF2F6
+    .form-control
+        background: white
+    
+.contact-page-map
+    margin-bottom: -10px

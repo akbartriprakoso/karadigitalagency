@@ -1,0 +1,317 @@
+/*******************************************************/
+/*****************  02. Common Classes *****************/
+/*******************************************************/
+.page-wrapper
+    position: relative
+    z-index: 9
+    width: 100%
+    margin: 0 auto
+    overflow: hidden
+    min-width: 300px
+    background: #FFFFFF
+    
+.container
+    max-width: $container
+    padding-left: $gutter/2
+    padding-right: $gutter/2
+
+.no-gap
+    +colgap(0)
+    
+.small-gap
+    +colgap(10px)
+    
+.large-gap
+    +xld
+        +colgap(75px)
+    
+.col-small
+    +xsd
+        flex: 0 0 100%
+        max-width: 100%
+    
+/** Section Title style **/
+.section-title
+    z-index: 1
+    position: relative
+    h2
+        text-transform: capitalize
+        span
+            z-index: 1
+            position: relative
+            display: inline-block
+            &:after
+                content: ''
+                left: 0
+                z-index: -1
+                bottom: 2px
+                width: 100%
+                height: 16px
+                position: absolute
+                background-size: 100% 100%
+                background-image: url(../images/shapes/title-bg-line.png)
+        +tmd
+            font-size: 40px
+        +mod
+            font-size: 35px
+        +msd
+            font-size: 30px
+.sub-title
+    font-weight: 700
+    color: $primary-color
+    display: inline-block
+    text-transform: uppercase
+    text-decoration: underline
+    font-family: $heading-font
+.text-white
+    .sub-title
+        color: $primary-color
+        
+
+/** Button style **/
+.theme-btn,
+a.theme-btn
+    color: white;
+    cursor: pointer
+    font-weight: 700
+    transition: 0.5s
+    text-align: center
+    padding: 16px 35px
+    display: inline-block
+    text-transform: uppercase
+    background: $primary-color
+    font-family: $heading-font
+    border: 1px solid $primary-color
+    &:hover,
+    &:focus
+        color: $primary-color
+        background: transparent
+    +smd
+        padding: 12px 20px
+    &.style-two
+        color: $primary-color
+        background: transparent
+        &:hover
+            color: white
+            background: $primary-color
+        
+/* View More Btn */
+.view-more
+    @extend %heading
+    display: inline-block
+    text-decoration: underline
+    i
+        margin-left: 10px
+        color: $primary-color
+        
+/* Read More Btn */
+.read-more
+    z-index: 1
+    @extend %heading
+    position: relative
+    display: inline-block
+    text-transform: uppercase
+    &:before
+        content: ''
+        top: -8px
+        left: -8px
+        z-index: -1
+        position: absolute
+        +circle(transparentize($primary-color, 0.8), 40px)
+    i
+        margin-left: 10px
+
+/* List style One */
+.list-style-one
+    li
+        display: flex
+        font-weight: 700
+        color: $heading-color
+        font-family: $heading-font
+        &:before
+            flex: none
+            content: ""
+            margin-right: 15px
+            +circle(white, 30px)
+            color: $primary-color
+            font-family: 'Flaticon'
+            border: 1px solid $border-color
+        &:not(:last-child)
+            margin-bottom: 20px
+    
+/** Social Link One **/
+.social-style-one
+    flex-wrap: wrap
+    display: inline-flex
+    a
+        margin-right: 10px
+        +circle(white, 40px)
+        color: $heading-color
+        &:last-child
+            margin-right: 0
+        &:hover
+            color: white
+            background: $primary-color
+        
+/** Social Link two **/
+.social-style-two
+    flex-wrap: wrap
+    display: inline-flex
+    a
+        margin: 0 15px 10px 0
+
+/*** Preloader style ** */
+.preloader
+    position: fixed
+    display: block
+    top: 0;
+    left: 0
+    width: 100%
+    height: 100%
+    z-index: 999999
+    background: white
+    &:after,
+    &:before
+        position: absolute
+        content: ''
+        width: 50px
+        height: 50px
+        border-radius: 50%
+        top: calc(50% - 25px)
+        left: calc(50% - 25px)
+        border: 2px solid $primary-color
+    &:before
+        opacity: 1
+        transform: scale(1, 1)
+        animation: spWaveBe 0.6s infinite linear
+    &:after
+        opacity: 0
+        transform: scale(0, 0)
+        animation: spWaveAf 0.6s infinite linear
+
+/* Pagination */    
+.pagination
+    align-items: center
+    li
+        margin: 10px 5px 0
+        a,
+        .page-link
+            padding: 0
+            border: none
+            box-shadow: none
+            font-weight: 600
+            +circle(white, 50px)
+            color: $heading-color
+            +smd
+                +size(40px)
+                font-size: 14px
+                line-height: 40px
+        &.disabled,
+        &:last-child,
+        &:first-child
+            .page-link
+                border-radius: 50%
+        &:first-child
+            margin-left: 0
+        &:last-child
+            margin-right: 0
+        &:last-child,
+        &:first-child
+            .page-link
+                &:not(:hover)
+                    color: $primary-color
+        &.active,
+        &:hover:not(.disabled)
+            .page-link
+                color: white
+                background: $primary-color
+        
+                
+/*** Scroll Top style ***/
+.scroll-top
+    position: fixed
+    bottom: 30px
+    right: 30px
+    z-index: 99
+    +size(40px)
+    color: white
+    display: none
+    cursor: pointer
+    border-radius: 5px
+    animation: pulse 2s infinite
+    background: lighten($heading-color, 8%)
+  
+/* Text White */
+.text-white *,
+.text-white a
+    color: white
+    li li
+        .dropdown-btn
+            span
+                color: $heading-color
+        
+/* Position */
+.rel
+    position: relative
+    
+@for $i from 0 through 5
+    .z-#{0 + $i}
+        z-index: 0 + $i
+    
+.overlay
+    +overlay(#010C2A, 0.9)
+    
+/* Shapes */
+.clos-shape,
+.circle-shape,
+.triangle-shape,
+.rectangle-shape,
+.half-circle-shape
+    z-index: -1
+    max-width: 10%
+    position: absolute
+    
+.triangle-shape
+    left: 5%
+    bottom: 50%
+    animation: 5s down-up-one infinite
+    
+.circle-shape
+    left: 45%
+    top: 10%
+    animation: 15s moveLeftRight infinite
+    
+.half-circle-shape
+    left: 50%
+    bottom: 15%
+    animation: 20s rotated_circle infinite
+    
+.rectangle-shape
+    right: 5%
+    bottom: 50%
+    animation: 5s down-up-two infinite
+    
+.clos-shape
+    top: 22%
+    left: 60%
+    animation: 5s zoomIn infinite
+    
+/* Backgruond Size */
+.bgs-cover
+    background-size: cover
+    background-position: center
+
+/* Color + Background */
+.bg-lighter
+    background-color: $light-color
+.bg-blue
+    background-color: #824CF2
+.bg-dark-blue
+    background-color: #010C2A
+     
+/* Border Radius */
+@for $i from 1 through 6
+    .br-#{5 * $i}
+        border-radius: 5px * $i
+    
+    

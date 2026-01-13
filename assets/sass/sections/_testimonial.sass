@@ -1,0 +1,57 @@
+/*******************************************************/
+/*************** 16. Testimonial Section ***************/
+/*******************************************************/
+.testimonial-section
+    .section-title h2
+        +mtd
+            font-size: 40px
+    .rectangle-shape
+        max-width: 15%
+        bottom: 0
+.testimonial-wrap
+    +gapLR(margin, -15px)
+.testimonial-item
+    margin: 15px
+    padding: 50px 40px
+    background: white
+    border-radius: 10px
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.05)
+    +smd
+        +gapLR(padding, 25px)
+    p
+        text-transform: capitalize
+.testimonial-author
+    display: flex
+    margin-top: 45px
+    align-items: center
+    .image
+        flex: none
+        max-width: 100px
+        position: relative
+        margin-right: 30px
+        +xsd
+            margin-right: 15px
+        &:after
+            position: absolute
+            content: "\f10e"
+            color: white
+            right: -5px
+            top: -15px
+            z-index: 1
+            font-size: 14px
+            font-weight: 600
+            +circle($primary-color, 40px)
+            font-family: 'Font Awesome 5 Free'
+        img
+            +size(100px)
+            border-radius: 50%
+            +xsd
+                +size(75px)
+    h5
+        margin-bottom: 5px
+    .designation
+        font-size: 14px
+        font-weight: 700
+        color: $primary-color
+        font-family: $heading-font
+    

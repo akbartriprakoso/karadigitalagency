@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kara Digital Agency</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+    body { background: #f5f5f5; color: #222; line-height: 1.6; }
+    header { background: #111827; color: #fff; padding: 16px 10%; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 10; }
+    .logo-wrap { display: flex; align-items: center; gap: 10px; }
+    .logo-wrap img { height: 40px; }
+    header nav a { color: #e5e7eb; margin-left: 20px; text-decoration: none; font-size: 0.95rem; }
+    header nav a:hover { text-decoration: underline; }
+
+    .hero { padding: 60px 10%; background: #111827; color: #fff; display: flex; flex-wrap: wrap; gap: 30px; align-items: center; }
+    .hero-text { flex: 1 1 260px; }
+    .hero-text h1 { font-size: 2rem; margin-bottom: 15px; }
+    .hero-text p { margin-bottom: 20px; max-width: 520px; }
+    .hero-btn { display: inline-block; padding: 10px 20px; background: #f97316; color: #111827; border-radius: 6px; text-decoration: none; font-weight: 600; }
+    .hero-btn:hover { opacity: 0.9; }
+    .hero-tag { font-size: 0.9rem; opacity: 0.85; margin-bottom: 6px; }
+
+    section { padding: 50px 10%; }
+    h2 { font-size: 1.6rem; margin-bottom: 15px; }
+    .subtitle { margin-bottom: 25px; color: #4b5563; }
+
+    .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .card { background: #fff; padding: 20px; border-radius: 10px; box-shadow: 0 10px 20px rgba(0,0,0,0.04); }
+    .card h3 { margin-bottom: 10px; font-size: 1.1rem; }
+    .card p { font-size: 0.95rem; color: #4b5563; }
+
+    .workflow-list, .why-list { list-style: none; margin-top: 10px; }
+    .workflow-list li, .why-list li { margin-bottom: 10px; padding-left: 18px; position: relative; font-size: 0.95rem; color: #374151; }
+    .workflow-list li::before, .why-list li::before {
+      content: "•"; position: absolute; left: 0; color: #f97316; font-size: 1.1rem;
+    }
+
+    .pricing { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; }
+    .pricing .card { border-top: 4px solid #f97316; }
+
+    .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; }
+    .portfolio-item { background: #fff; border-radius: 10px; padding: 10px; text-align: center; font-size: 0.9rem; box-shadow: 0 10px 20px rgba(0,0,0,0.04); }
+    .portfolio-thumb { background: #e5e7eb; height: 120px; border-radius: 8px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: #6b7280; overflow: hidden; }
+    .portfolio-thumb img { width: 100%; height: 100%; object-fit: cover; }
+
+    .contact-box { background: #111827; color: #fff; border-radius: 12px; padding: 30px; text-align: center; }
+    .contact-box p { margin-bottom: 15px; color: #e5e7eb; }
+    .contact-box a { color: #f97316; font-weight: 600; text-decoration: none; }
+
+    footer { text-align: center; padding: 20px 10%; font-size: 0.85rem; color: #6b7280; }
+
+    @media (max-width: 600px) {
+      .hero { padding-top: 80px; }
+      header { position: static; flex-direction: column; align-items: flex-start; gap: 10px; }
+      header nav a { margin-left: 0; margin-right: 10px; }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo-wrap">
+    <!-- ganti src dengan path logo kamu, misal: images/logo-kara.png -->
+    <img src="logo-kara.png" alt="Kara Digital Agency Logo" />
+    <strong>Kara Digital Agency</strong>
+  </div>
+  <nav>
+    <a href="#about">Tentang</a>
+    <a href="#services">Layanan</a>
+    <a href="#portfolio">Portofolio</a>
+    <a href="#pricing">Paket</a>
+    <a href="#contact">Kontak</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="hero-tag">Social Media Management • Content Creation • Website Development</p>
+    <h1>Bantu Bisnismu Tumbuh Lewat Konten & Website yang Profesional.</h1>
+    <p>Kara Digital Agency membantu pelaku usaha mengelola media sosial dan website company profile secara profesional – mulai dari strategi, produksi konten, hingga laporan performa.</p>
+    <a href="#contact" class="hero-btn">Konsultasi Sekarang</a>
+  </div>
+</section>
+
+<section id="about">
+  <h2>Tentang Kara Digital Agency</h2>
+  <p class="subtitle">
+    Kara Digital Agency adalah agensi digital yang berfokus pada pengelolaan media sosial, pembuatan konten, dan pengembangan website company profile untuk membantu UMKM hingga korporasi terlihat lebih profesional dan terpercaya.
+  </p>
+  <ul class="why-list">
+    <li>Ada layanan web development untuk company profile yang membuat bisnis kelihatan lebih terpercaya.</li>
+    <li>Memudahkan pelaku bisnis fokus ke operasional utama tanpa pusing urus konten harian.</li>
+    <li>Dikelola oleh SDM yang sudah profesional dan bersertifikat.</li>
+    <li>Pengalaman di berbagai industri: F&B, teknologi edukasi, dan lainnya.</li>
+  </ul>
+</section>
+
+<section id="services">
+  <h2>Layanan Kami</h2>
+  <p class="subtitle">Solusi lengkap untuk kebutuhan digital bisnismu.</p>
+  <div class="grid-3">
+    <div class="card">
+      <h3>Social Media Management</h3>
+      <p>Perencanaan konten bulanan, riset tren & audiens, caption, desain, upload, serta monitoring performa akun media sosial bisnis Anda.</p>
+    </div>
+    <div class="card">
+      <h3>Content Creation</h3>
+      <p>Produksi foto & video untuk Instagram, TikTok, Reels, dan platform lain dengan konsep storytelling, edukasi, promosi, dan POV.</p>
+    </div>
+    <div class="card">
+      <h3>Website Development</h3>
+      <p>Pembuatan website company profile yang modern & responsif, lengkap dengan halaman layanan, portofolio, dan kontak untuk meningkatkan kredibilitas bisnis.</p>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Alur Kerja</h2>
+  <p class="subtitle">Proses kerja yang jelas, profesional, dan terukur.</p>
+  <ol class="workflow-list">
+    <li>Konsultasi & analisis kebutuhan bisnis.</li>
+    <li>Penyusunan strategi, struktur website, dan kalender konten.</li>
+    <li>Produksi konten (foto, video, desain, copywriting).</li>
+    <li>Posting & optimasi media sosial + peluncuran website.</li>
+    <li>Laporan insight & rekomendasi lanjutan.</li>
+  </ol>
+</section>
+
+<section id="pricing">
+  <h2>Paket Layanan</h2>
+  <p class="subtitle">Paket masih fleksibel & bisa disesuaikan dengan kebutuhan dan budget.</p>
+  <div class="pricing">
+    <div class="card">
+      <h3>Paket Starter</h3>
+      <p>Untuk UMKM yang baru mulai.</p>
+      <ul class="workflow-list">
+        <li>±12 konten/bulan</li>
+        <li>1 akun media sosial</li>
+        <li>Kalender konten & caption</li>
+        <li>Laporan sederhana bulanan</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Paket Growth</h3>
+      <p>Untuk yang ingin naikkan traffic & engagement.</p>
+      <ul class="workflow-list">
+        <li>±20–25 konten/bulan</li>
+        <li>Hingga 2 akun media sosial</li>
+        <li>Produksi konten foto/video</li>
+        <li>Opsional: basic website / landing page</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>Paket Custom</h3>
+      <p>Solusi fleksibel untuk perusahaan atau project khusus.</p>
+      <ul class="workflow-list">
+        <li>Jumlah konten & platform menyesuaikan</li>
+        <li>Website company profile lengkap</li>
+        <li>Meeting & laporan rutin</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <h2>Portofolio</h2>
+  <p class="subtitle">Beberapa contoh project yang sudah kami kerjakan.</p>
+
+  <h3>F&B – Warung Cerang 3</h3>
+  <p class="subtitle">Konten POV, storytelling, dan promo untuk brand kuliner.</p>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <!-- ganti dengan screenshot cerang3 -->
+        <img src="porto-cerang3-1.jpg" alt="Cerang3 Reels" />
+      </div>
+      <span>Konten POV & promo menu. Views hingga ratusan ribu.</span>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="porto-cerang3-2.jpg" alt="Cerang3 Bazaar" />
+      </div>
+      <span>Dokumentasi event & bazaar untuk meningkatkan awareness.</span>
+    </div>
+  </div>
+
+  <h3 style="margin-top:30px;">Technology & Education – PT MBB Indonesia</h3>
+  <p class="subtitle">Konten edukatif & demo produk Interactive Smartboard.</p>
+  <div class="portfolio-grid">
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="porto-mbb-1.jpg" alt="MBB Smartboard Demo" />
+      </div>
+      <span>Konten edukasi biologi & sains dengan Smartboard.</span>
+    </div>
+    <div class="portfolio-item">
+      <div class="portfolio-thumb">
+        <img src="porto-mbb-2.jpg" alt="MBB Viral Content" />
+      </div>
+      <span>Konten challenge & fun yang mencapai views ratusan ribu.</span>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact-box">
+    <h2>Hubungi Kami</h2>
+    <p>Tertarik mengembangkan media sosial & website bisnis kamu bersama Kara Digital Agency?</p>
+    <p>WhatsApp: <a href="https://wa.me/62xxxxxxxxxxx" target="_blank">+62 xxx-xxxx-xxxx</a></p>
+    <p>Instagram: <a href="https://instagram.com/usernamekamu" target="_blank">@usernamekamu</a></p>
+    <p>Email: <a href="mailto:halo@karadigitalagency.com">halo@karadigitalagency.com</a></p>
+  </div>
+</section>
+
+<footer>
+  © <span id="year"></span> Kara Digital Agency. All rights reserved.
+</footer>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

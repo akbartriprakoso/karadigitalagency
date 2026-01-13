@@ -1,0 +1,78 @@
+/*******************************************************/
+/******************* 07. Hero Section ******************/
+/*******************************************************/
+.hero-section
+    overflow: hidden
+    background-repeat: no-repeat
+    &:before
+        content: ''
+        position: absolute
+        height: 450px
+        width: 350px
+        opacity: 0.2
+        left: 0
+        top: 10%
+        z-index: -2
+        background: #005DE0
+        filter: blur(200px)
+    &:after
+        content: ''
+        position: absolute
+        +size(100%)
+        left: 0
+        top: 0
+        z-index: -1
+        background: url(../images/hero/bg-shape.png) no-repeat
+    .container
+        max-width: 1350px
+.hero-content
+    z-index: 1
+    position: relative
+    +mtd
+        +gapTB(margin, 120px)
+    h1
+        text-transform: capitalize
+        span
+            position: relative
+            &:after
+                content: ''
+                left: 0
+                bottom: 5px
+                width: 100%
+                height: 20px
+                position: absolute
+                background-size: 100% 100%
+                background-image: url(../images/shapes/title-bg-line.png)
+                +mdd
+                    height: 15px
+                +smd
+                    height: 10px
+        +mdd
+            font-size: 55px
+        +mod
+            font-size: 50px
+        +msd
+            font-size: 40px
+        +xsd
+            font-size: 32px
+    p
+        font-size: 18px
+        text-transform: capitalize
+        +smd
+            font-size: 16px
+    
+.hero-right-images
+    z-index: 1
+    position: relative
+    +xld
+        margin-right: -100px
+    &:after
+        content: ''
+        right: 0
+        bottom: 0
+        z-index: -1
+        opacity: 0.2
+        position: absolute
+        filter: blur(250px)
+        +size(550px, 400px)
+        background: $primary-color

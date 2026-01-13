@@ -1,0 +1,137 @@
+/*******************************************************/
+/******************* 21. Main Footer *******************/
+/*******************************************************/
+.main-footer
+    .half-circle-shape
+        bottom: 60%
+        left: 80%
+    .section-title
+        h2
+            +mtd
+                font-size: 45px
+.subscribe-wrap
+    padding: 70px 70px 60px
+    transform: translateY(-100px)
+    +msd
+        +gapLR(padding, 20px)
+        h2
+            font-size: 28px
+.subscribe-form
+    z-index: 1
+    position: relative
+    form
+        padding: 5px
+        display: flex
+        background: white
+        border-radius: 5px
+        margin-bottom: 25px
+        +smd
+            display: block
+        input
+            border: none
+            color: $base-color
+            padding: 16px 0 16px 30px
+            &::placeholder
+                font-size: 16px
+                font-weight: 400
+                color: $base-color
+        button
+            flex: none
+            color: white
+            font-weight: 600
+            padding: 16px 25px
+            border-radius: 5px
+            background: #FF6ABB
+            text-transform: uppercase
+            +smd
+                width: 100%
+    .hand
+        position: absolute
+        max-width: 55%
+        z-index: -1
+        left: 100%
+        top: 35%
+.footer-title
+    margin-bottom: 35px
+            
+.footer-widget
+    margin-bottom: 50px
+
+.footer-contact
+    display: flex
+    align-items: center
+    i
+        flex: none
+        font-size: 18px
+        margin-right: 20px
+        +circle(white, 40px)
+        color: $primary-color
+    a
+        font-weight: 700
+        font-family: $heading-font
+        
+.menu-widget
+    ul
+        li
+            transition: 0.5s
+            position: relative
+            text-transform: capitalize
+            &:before
+                position: absolute
+                content: ''
+                height: 4px
+                width: 14px
+                left: 0
+                top: 11px
+                opacity: 0
+                transition: 0.5s
+                background: $primary-color
+            a
+                color: #D1D2D3
+            &:hover
+                padding-left: 20px
+                &:before
+                    opacity: 1
+                a
+                    color: $primary-color
+                
+            &:not(:last-child)
+                margin-bottom: 15px
+            
+.footer-widget
+    .social-style-one a:not(:hover) i
+        color: $heading-color
+        transition: 0.5s
+    
+.copyright-area
+    flex-wrap: wrap
+    margin-top: 45px
+    padding-top: 35px
+    padding-bottom: 20px
+    +flexcenter(space-between)
+    border-top: 1px solid rgba(255, 255, 255, 0.1)
+    p
+        font-weight: 700
+        margin-right: 25px
+        font-family: $heading-font
+        a
+            color: $primary-color
+    .footer-menu
+        display: flex
+        flex-wrap: wrap
+        font-weight: 700
+        margin-bottom: 5px
+        text-transform: capitalize
+        font-family: $heading-font
+        li
+            line-height: 1
+            margin-bottom: 10px
+            a
+                text-decoration: underline
+            &:not(:last-child)
+                margin-right: 15px
+                padding-right: 15px
+                border-right: 1px solid
+            +mdd
+                margin-right: 25px
+            

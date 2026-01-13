@@ -1,0 +1,85 @@
+/*******************************************************/
+/****************** 15. Team Section *******************/
+/*******************************************************/
+.team-section
+    .circle-shape
+        left: 8%
+    .half-circle-shape
+        bottom: 0
+        left: 82%
+.team-member
+    margin-bottom: 30px
+    img
+        width: 100%
+        border-radius: 5px 5px 0 0
+    .member-description
+        padding: 30px
+        position: relative
+        background: #FFFFFF
+        border-radius: 0 0 5px 5px
+        box-shadow: 0px 10px 70px rgba(0, 0, 0, 0.05)
+    .social-area
+        right: 30px
+        transition: 0.5s
+        position: absolute
+        bottom: calc(100% - 25px)
+        button
+            transition: 0.5s
+            color: $primary-color
+            +circle($light-color, 50px)
+        .social-icons
+            height: 0
+            opacity: 0
+            z-index: -1
+            display: flex
+            transition: 0.5s
+            position: relative
+            flex-direction: column
+            a
+                margin-bottom: 10px
+                +circle(white, 50px)
+                color: $primary-color
+                &:hover
+                    color: white
+                    background: $primary-color
+        &:hover
+            button
+                color: white
+                background: $primary-color
+            .social-icons
+                opacity: 1
+                z-index: 1
+                height: 100%
+    h4
+        font-size: 20px
+        margin-bottom: 5px
+        text-transform: capitalize
+    .designation
+        font-size: 14px
+        font-weight: 700
+        color: $primary-color
+        text-transform: capitalize
+        font-family: $heading-font
+        
+.team-wrap
+    +gapLR(margin, -15px)
+    .slick-list
+        padding-right: 400px
+        margin-right: -400px
+    .team-member
+        +gapLR(margin, 15px)
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.05)
+        
+.team-section-bg
+    position: absolute
+    height: 65%
+    width: 100%
+    left: 0
+    top: -22%
+    z-index: -2
+    background: $light-color
+    &:after
+        bottom: 25%
+        right: -10%
+    .half-circle-shape
+        bottom: 46%

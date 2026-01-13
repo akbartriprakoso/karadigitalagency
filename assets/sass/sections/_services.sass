@@ -1,0 +1,27 @@
+/*******************************************************/
+/***************** 09. Services Section ****************/
+/*******************************************************/
+.service-title-content
+    +xld
+        margin-left: 30px
+.service-item
+    height: 100%
+    padding: 40px
+    transition: 0.5s
+    border-radius: 10px
+    border-right: 1px solid $border-color
+    +mdd
+        border-bottom: 1px solid $border-color
+    .icon
+        margin-bottom: 30px
+        +circle(white, 80px)
+    h4
+        transition: 0.5s
+        margin-bottom: 30px
+    &:hover
+        background: $primary-color
+        h4, a
+            color: white
+        .read-more:before
+            background: transparentize(white, 0.8)
+            

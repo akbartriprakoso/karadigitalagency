@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "flaticon";
+  src: url("./flaticon.ttf?b92c0e615f80bd32f56880e54992b804") format("truetype"), url("./flaticon.woff?b92c0e615f80bd32f56880e54992b804") format("woff"), url("./flaticon.woff2?b92c0e615f80bd32f56880e54992b804") format("woff2"), url("./flaticon.eot?b92c0e615f80bd32f56880e54992b804#iefix") format("embedded-opentype"), url("./flaticon.svg?b92c0e615f80bd32f56880e54992b804#flaticon") format("svg"); }
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+  font-family: flaticon !important;
+  font-style: normal;
+  font-weight: normal !important;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+.flaticon-tick:before {
+  content: ""; }
+
+.flaticon-branding:before {
+  content: ""; }
+
+.flaticon-play-button-arrowhead:before {
+  content: ""; }
+
+.flaticon-location:before {
+  content: ""; }
+
+.flaticon-mail:before {
+  content: ""; }
+
+.flaticon-call:before {
+  content: ""; }
+
+.flaticon-chevron:before {
+  content: ""; }
+
+.flaticon-share:before {
+  content: ""; }

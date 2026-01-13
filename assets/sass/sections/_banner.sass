@@ -1,0 +1,69 @@
+/*******************************************************/
+/******************* 08. Page Banner *******************/
+/*******************************************************/
+.page-banner
+    overflow: hidden
+    &:before
+        content: ''
+        position: absolute
+        +size(400px)
+        opacity: 0.1
+        right: -200px
+        top: -200px
+        z-index: -2
+        border-radius: 50%
+        background: #005DE0
+        filter: blur(200px)
+    &:after
+        content: ''
+        position: absolute
+        +size(100%)
+        left: 0
+        top: 0
+        z-index: -1
+        background: url(../images/background/banner-bg.png) no-repeat
+    .triangle-shape
+        left: 20%
+        bottom: 35%
+    .half-circle-shape
+        left: 80%
+        bottom: 65%
+.banner-inner
+    &:before
+        content: ''
+        position: absolute
+        +size(300px)
+        opacity: 0.2
+        left: 0
+        top: 0
+        z-index: -2
+        border-radius: 50%
+        filter: blur(150px)
+        background: $primary-color
+.page-title
+    margin-bottom: 15px
+    text-transform: capitalize
+    +mod
+        font-size: 40px
+    +smd
+        font-size: 35px
+.breadcrumb
+    margin: 0
+    padding: 0
+    font-weight: 700
+    justify-content: center
+    background: transparent
+    font-family: $heading-font
+    text-transform: capitalize
+    .breadcrumb-item
+        align-items: center
+        a:not(:hover)
+            color: $heading-color
+        &.active
+            color: $primary-color
+        &+.breadcrumb-item::before
+            content: "\f061"
+            font-weight: 600
+            font-size: 14px
+            margin: 0 10px
+            font-family: "Font Awesome 5 Free"

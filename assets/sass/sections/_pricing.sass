@@ -1,0 +1,108 @@
+/*******************************************************/
+/***************** 14. Pricing Section *****************/
+/*******************************************************/
+.pricing-section
+    &:before
+        position: absolute
+        content: ''
+        left: 0
+        top: 0
+        z-index: -1
+        filter: blur(200px)
+        +circle(transparentize($primary-color, 0.9), 600px)
+    &:after
+        position: absolute
+        content: ''
+        z-index: -1
+        right: 100px
+        bottom: 100px
+        filter: blur(150px)
+        +circle(transparentize($primary-color, 0.9), 400px)
+    .triangle-shape
+        left: 88%
+        bottom: 20%
+    .half-circle-shape
+        left: 10%
+        top: 15%
+.pricing-item
+    padding: 50px
+    background: white
+    margin-bottom: 30px
+    border-radius: 10px
+    +xsd
+        +gapLR(padding, 25px)
+    h3
+        margin-bottom: 5px
+    .license
+        display: block
+        font-size: 14px
+        margin-bottom: 40px
+    .price
+        z-index: 1
+        line-height: 1
+        font-size: 70px
+        @extend %heading
+        padding-left: 35px
+        position: relative
+        display: inline-flex
+        +smd
+            font-size: 50px
+        &:before
+            content: '$'
+            left: 20px
+            top: -12px
+            font-size: 30px
+            text-indent: -80px
+            position: absolute
+            +circle(transparentize($primary-color, 0.8), 60px)
+        &:after
+            font-size: 16px
+            align-self: end
+            content: '/ month'
+            margin-left: 10px
+            text-transform: capitalize
+    .list-style-one
+        margin-top: 33px
+        padding-top: 30px
+        margin-bottom: 45px
+        border-top: 1px solid $border-color
+        li
+            font-weight: 400
+            &:not(:last-child)
+                margin-bottom: 15px
+            
+/* Video Section */
+.video-wrap
+    overflow: hidden
+    margin-top: -180px
+    +overlay(#010C2A, 0.7)
+    transform: translateY(180px)
+    +tbd
+        +gapLR(padding, 50px)
+    +msd
+        +gapLR(padding, 15px)
+    .video-play
+        bottom: 0
+        left: 50%
+        z-index: 5
+        position: absolute
+        transform: translate(-50%, -20%)
+        i
+            color: white
+            font-size: 20px
+            border: 2px dashed
+            +circle(transparent, 75px)
+            line-height: 71px
+        &:after
+            content: ''
+            z-index: -1
+            left: 50%
+            top: 0
+            transition: 0.5s
+            position: absolute
+            +circle($primary-color, 300%)
+            transform: translate(-50%, -30px)
+        &:hover
+            transform: translate(-50%, -25%)
+            &:after
+                transform: translate(-50%, -35px)

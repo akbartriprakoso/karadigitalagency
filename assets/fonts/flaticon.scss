@@ -1,0 +1,57 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?b92c0e615f80bd32f56880e54992b804") format("truetype"),
+url("./flaticon.woff?b92c0e615f80bd32f56880e54992b804") format("woff"),
+url("./flaticon.woff2?b92c0e615f80bd32f56880e54992b804") format("woff2"),
+url("./flaticon.eot?b92c0e615f80bd32f56880e54992b804#iefix") format("embedded-opentype"),
+url("./flaticon.svg?b92c0e615f80bd32f56880e54992b804#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "tick": "\f101",
+    "branding": "\f102",
+    "play-button-arrowhead": "\f103",
+    "location": "\f104",
+    "mail": "\f105",
+    "call": "\f106",
+    "chevron": "\f107",
+    "share": "\f108",
+);
+
+.flaticon-tick:before {
+    content: map-get($flaticon-map, "tick");
+}
+.flaticon-branding:before {
+    content: map-get($flaticon-map, "branding");
+}
+.flaticon-play-button-arrowhead:before {
+    content: map-get($flaticon-map, "play-button-arrowhead");
+}
+.flaticon-location:before {
+    content: map-get($flaticon-map, "location");
+}
+.flaticon-mail:before {
+    content: map-get($flaticon-map, "mail");
+}
+.flaticon-call:before {
+    content: map-get($flaticon-map, "call");
+}
+.flaticon-chevron:before {
+    content: map-get($flaticon-map, "chevron");
+}
+.flaticon-share:before {
+    content: map-get($flaticon-map, "share");
+}

@@ -1,0 +1,76 @@
+/*******************************************************/
+/****************** 10. About Section ******************/
+/*******************************************************/
+.about-section
+    .half-circle-shape
+        left: 85%
+.about-content
+    max-width: 480px
+    +xld
+        margin-left: 50px
+
+.creative-area,
+.team-section-bg,
+.vision-mission-area
+    overflow: hidden
+    &:before
+        content: ''
+        position: absolute
+        height: 350px
+        width: 450px
+        opacity: 0.1
+        left: 0
+        top: 0
+        z-index: -1
+        background: #005DE0
+        filter: blur(150px)
+    &:after
+        content: ''
+        right: 0
+        bottom: 0
+        z-index: -1
+        opacity: 0.2
+        position: absolute
+        filter: blur(200px)
+        +size(550px, 400px)
+        background: $primary-color
+    .circle-shape
+        left: 6%
+        top: 15%
+    .half-circle-shape
+        left: 85%
+        bottom: 20%
+    .triangle-shape
+        left: 50%
+        bottom: 30%
+.vision-mission-tab
+    max-width: 500px
+    .nav-link
+        margin-right: 10px
+        margin-bottom: 10px
+        padding: 15px 40px
+        color: $primary-color
+        font-family: $heading-font
+        text-transform: capitalize
+        border: 1px solid $primary-color
+        &.active
+            color: white
+            background: $primary-color
+            
+.creative-content
+    .list-style-one
+        display: flex
+        flex-wrap: wrap
+        li
+            width: 50%
+            +msd
+                width: 100%
+            
+.creative-image
+    +xld
+        margin-right: -65px
+    
+.about-content-two
+    max-width: 455px
+    +mod
+        margin-bottom: 65px

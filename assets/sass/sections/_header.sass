@@ -1,0 +1,254 @@
+/*******************************************************/
+/******************* 06. Header style ******************/
+/*******************************************************/
+.main-header
+    position: relative
+    left: 0px
+    top: 0px
+    z-index: 999
+    width: 100%
+    transition: all 500ms ease
+    .header-upper
+        z-index: 5
+        width: 100%
+        background: white
+        position: relative
+        transition: all 500ms ease
+        +gapLR(padding, 110px)
+        +axld
+            +gapLR(padding, 55px)
+        +lgd
+            +gapLR(padding, 15px)
+        +tbd
+            +gapTB(padding, 10px)
+    .logo-outer
+        flex: none
+        +tbd
+            display: none
+    .logo
+        z-index: 9
+        padding: 2px 0
+        position: relative
+        +smd
+            max-width: 120px
+    .header-contact
+        display: flex
+        margin-left: 90px
+        padding-left: 50px
+        align-items: center
+        border-left: 1px solid $border-color
+        +axld
+            margin-left: 25px
+            padding-left: 25px
+        +lgd
+            display: none
+        > i
+            font-size: 25px
+            margin-right: 20px
+            color: $primary-color
+            +circle($light-color, 60px)
+        .content
+            h5
+                font-size: 18px
+                margin-bottom: 5px
+            h6
+                margin-bottom: 0
+    &.fixed-header
+        .header-upper
+            top: 0
+            left: 0
+            position: fixed
+            animation: sticky  1s
+            box-shadow: 0px 0px 30px 0px rgba(87, 95, 245, .10)
+
+.nav-outer
+    width: 100%
+    +flexcenter(end)
+    .menu-btn
+        margin-left: 75px
+        +tbd
+            display: none
+ 
+/** Header Main Menu **/
+.main-menu
+    .collapse
+        +tbd
+            overflow: auto
+    .navbar-collapse
+        padding: 0px
+        > ul
+            display: flex
+            +tbd
+                display: block
+                padding: 25px 0
+                background: #FFFFFF
+                > li:last-child
+                    border-bottom: 1px solid #f3f3f3
+        +tbd
+            left: 0
+            width: 100%
+            padding: 0 15px
+            position: absolute
+        li
+            +flexcenter(space-between)
+            padding: 40px 20px
+            +lgd
+                padding: 30px 15px
+            +mdd
+                padding: 30px 10px
+            +tbd
+                display: block
+                padding: 0 20px
+                border-top: 1px solid #f3f3f3
+            &.dropdown .dropdown-btn
+                cursor: pointer
+                font-size: 8px
+                margin-left: 5px
+                margin-top: -2px
+                +tbd
+                    position: absolute
+                    right: 10px
+                    top: 0
+                    width: 50px
+                    height: 43px
+                    line-height: 46px
+                    text-align: center
+                    border-left: 1px solid #f2f2f2
+            a
+                position: relative
+                display: block
+                opacity: 1
+                @extend %heading
+                text-transform: uppercase
+                transition: all 500ms ease
+                +tbd
+                    padding: 10px 10px
+                    line-height: 22px
+            &.current > a, &.current-menu-item > a
+                font-weight: 500
+            li
+                border-top: 1px solid #f3f3f3
+                a
+                    text-transform: capitalize
+            .megamenu
+                position: absolute
+                left: 0px
+                top: 100%
+                width: 100%
+                z-index: 100
+                display: none
+                padding: 20px 0
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +clearfix
+                +tbd
+                    position: relative
+                    box-shadow: none
+                    width: 100%
+                    .container
+                        max-width: 100%
+                    .row
+                        margin: 0px
+                ul
+                    display: block
+                    position: relative
+                    top: 0
+                    width: 100%
+                    box-shadow: none
+            ul
+                position: absolute
+                left: inherit
+                top: 100%
+                min-width: 250px
+                z-index: 100
+                display: none
+                background: #ffffff
+                box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05), -2px 0px 5px 1px rgba(0, 0, 0, 0.05)
+                +tbd
+                    position: relative
+                    display: none
+                    width: 100%
+                    box-shadow: none
+                    +clearfix
+                    +xsd
+                        min-width: auto
+                li
+                    width: 100%
+                    padding: 10px 20px
+                    +tbd
+                        padding: 0 15px
+                    ul
+                        left: 100%
+                        top: 0%
+                        +tbd
+                            left: auto
+
+    .navbar-header
+        display: none
+        +tbd
+            +flexcenter(start)
+        .navbar-toggle
+            float: right
+            padding: 4px 0
+            cursor: pointer
+            background: transparent
+            .icon-bar
+                background: $base-color
+                height: 2px
+                width: 30px
+                display: block
+                margin: 7px 0
+
+/* Menu Icons */
+.menu-icons
+    flex: none
+    display: flex
+    align-items: center
+    +tbd
+        display: none
+    button
+        background: transparent
+        
+/* Header Search */
+.nav-search
+    margin-left: 15px
+    margin-right: 65px
+    position: relative
+    +axld
+        margin-right: 25px
+    +mdd
+        +gapLR(margin, 25px)
+    +smd
+        display: none
+    button
+        background: transparent
+    form
+        position: absolute
+        width: 320px
+        top: 100%
+        right: 0
+        z-index: 777
+        padding: 10px
+        +flexcenter(center)
+        background-color: #fff
+        box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.05)
+        &.hide
+            display: none
+        input
+            border: none
+            background: white
+            padding: 15px 5px 15px 25px
+        button
+            padding: 15px 20px 15px 0
+            
+.header-two
+    .container-fluid
+        max-width: 1550px
+    .nav-outer
+        justify-content: center
+        +tbd
+            justify-content: end
+    .nav-search
+        > button
+            +circle(transparent, 50px)
+            border: 1px solid $border-color

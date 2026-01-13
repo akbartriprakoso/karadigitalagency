@@ -1,0 +1,132 @@
+/*******************************************************/
+/***************** 19. Sidebar Widgets *****************/
+/*******************************************************/
+.widget-title
+    margin-bottom: 20px
+.widget
+    padding: 40px 30px
+    border: 1px solid $border-color
+    +xsd
+        +gapLR(padding, 15px)
+    &:not(:last-child)
+        margin-bottom: 30px
+    
+.search-widget
+    +gapTB(padding, 30px)
+    form
+        display: flex
+        input
+            border: none
+            background: $light-color
+            padding: 18px 0 18px 20px
+            &::placeholder
+                font-style: italic
+                color: $base-color
+        button
+            flex: none
+            width: 60px
+            color: white
+            background: $primary-color
+            
+.category-widget
+    ul
+        li
+            padding-bottom: 10px
+            +flexcenter(space-between)
+            border-bottom: 1px solid $border-color
+            &:not(:last-child)
+                margin-bottom: 10px
+            a
+                position: relative
+                &:before
+                    left: 0
+                    top: 1px
+                    opacity: 0
+                    content: "\f101"
+                    transition: 0.5s
+                    font-weight: 600
+                    position: absolute
+                    color: $primary-color
+                    font-family: "Font Awesome 5 Free"
+                &:hover
+                    padding-left: 20px
+                    &:before
+                        opacity: 1
+            span
+                flex: none
+                font-size: 12px
+                font-weight: 600
+                +circle($light-color, 30px)
+                
+.widgets-posts
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+               
+.blog-widget
+    img
+        width: 100%
+    .view-more
+        color: $primary-color
+.blog-widget-item
+    +tmd
+        width: calc(50% - 10px)
+    &:not(:last-child)
+        margin-bottom: 20px
+.blog-widget-content
+    padding: 0 30px 30px
+    border: 1px solid $border-color
+    +xsd
+        +gapLR(padding, 15px)
+    h5
+        font-size: 18px
+        margin: -5px 0 0
+        line-height: 1.5
+        +xsd
+            font-size: 16px
+    .blog-meta
+        font-size: 14px
+        padding: 5px 20px
+        transform: translateY(-25px)
+        
+.tag-cloud
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px -10px 0
+    a
+        font-size: 14px
+        padding: 5px 16px
+        margin: 0 10px 10px 0
+        border: 1px solid $border-color
+        &:hover
+            color: white
+            background: $primary-color
+            border-color: $primary-color
+        
+.gallery-items
+    display: flex
+    flex-wrap: wrap
+    margin: 0 -10px -10px 0
+    .gallery-widget-item
+        margin: 0 10px 10px 0
+        +overlay($heading-color, 0)
+        max-width: calc(33.333% - 10px)
+        &:before
+            z-index: 1
+            transition: 0.5s
+        img
+            width: 100%
+        a
+            position: absolute
+            left: 50%
+            top: 50%
+            z-index: 2
+            color: white
+            font-size: 25px
+            transition: 0.25s
+            transform: translate(-50%, -50%) scale(0)
+        &:hover
+            a
+                transform: translate(-50%, -50%) scale(1)
+            &:before
+                opacity: 0.9
