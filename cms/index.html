@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Kara CMS — Admin</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <h1>Kara CMS</h1>
+      <div class="actions">
+        <button id="btnAdd">+ Tambah Post</button>
+        <button id="btnExport">Export JSON</button>
+        <label class="btn-import">Import JSON<input id="importFile" type="file" accept="application/json"></label>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="loginSection" class="card">
+      <h2>Login Admin (demo)</h2>
+      <p>Masukkan kata sandi demo untuk mengakses admin: <strong>admin</strong></p>
+      <input id="adminPassword" type="password" placeholder="Kata sandi">
+      <button id="btnLogin">Masuk</button>
+    </section>
+
+    <section id="dashboard" class="hidden">
+      <h2>Daftar Post</h2>
+      <div id="postsList"></div>
+    </section>
+
+    <section id="editor" class="hidden card">
+      <h2 id="editorTitle">Tambah Post</h2>
+      <form id="postForm">
+        <label>Judul<input id="title" required></label>
+        <label>Tanggal<input id="date" type="date"></label>
+        <label>Excerpt<textarea id="excerpt" rows="2"></textarea></label>
+        <label>Slug<input id="slug"></label>
+        <label>Konten<textarea id="content" rows="8"></textarea></label>
+        <div class="form-actions">
+          <button type="submit">Simpan</button>
+          <button type="button" id="btnCancel">Batal</button>
+        </div>
+      </form>
+    </section>
+
+    <footer class="muted">CMS ini bersifat statis dan menyimpan data di localStorage. Gunakan fitur Export/Import untuk memindahkan data.</footer>
+  </main>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
